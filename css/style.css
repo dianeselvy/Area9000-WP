@@ -1,0 +1,165 @@
+*   {
+        margin:0;
+        padding:0;
+    }
+
+input[type='checkbox'] {
+    width:20px;
+    height:20px;
+    background:#21ed24;
+    border-radius:5px;
+    border:2px solid #555;
+}
+
+#enter {
+    position:absolute;
+    bottom:300;
+    left:50%;
+    width: 600px;
+    margin-right:-50%;
+    transform:translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.checkbox-group {
+    position:absolute;
+    font-family: 'Coda', cursive;
+    top:50%;
+    left:0;
+    width:100%;
+    font-size: 20px;
+    text-align:center;
+}
+
+.checkbox-group input {
+    padding:15px;
+}
+
+#ageCheck { 
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    bottom: 350;
+    left: 50%;
+}
+
+#ageCheck label{
+    font-family: 'Play', sans-serif;
+    color:#1dcf2b;
+    font-size:28px;
+}
+
+#alienCheck { 
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    bottom: 350;
+    left: 50%;
+}
+
+#alienCheck label{
+    font-family: 'Play', sans-serif;
+    color:#1dcf2b;
+    font-size:28px;
+}
+
+#splash {
+    position:relative;
+    top:0;
+    left:0;
+    bottom:0;
+}
+
+#splash-2 {
+    position:relative;
+    top:0;
+    left:0;
+    bottom:0;
+}
+
+#splash-3 {
+    position:relative;
+    top:0;
+    left:0;
+    bottom:0;
+}
+
+#space {
+    width:100%;
+    height:100%;
+}
+        
+body{
+    font-family:sans-serif;
+}
+        
+#post-splash{
+    position:fixed;
+    z-index:-1000;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    top:0;
+    left:0;
+}
+        
+#video-bg-elem{
+    position:absolute;
+    top:0;
+    left:0;
+    min-height:100%;
+    min-width:100%;
+}
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px) {
+#enter {
+    width: 225px;
+  }
+    
+.checkbox-group {
+    font-size: 16px;
+}
+    
+#space {
+    height:100%;
+    width:auto;
+}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 481px) and (max-width : 675px) {
+#enter {
+    width:400px;
+  }
+    
+.checkbox-group {
+    font-size: 24px;
+}
+    
+#space {
+    height:100%;
+    width:auto;
+}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 676px) and (max-width : 1024px) {
+#enter {
+    width:500px;
+  }
+
+.checkbox-group {
+    font-size: 28px;
+}
+    
+#space {
+    height:100%;
+    width:auto;
+}
+}

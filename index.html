@@ -1,0 +1,69 @@
+<!--index.html-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Area 9000</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <?php include_once("analyticstracking.php") ?>
+</head>
+    
+<body>    
+    <img src="img/metal.jpg" id="space">
+    <div id="splash">
+        <!--<h2 id="enter">ENTER</h2><Br />-->
+                <img src="img/enter3.png" id="enter">
+        
+    </div>
+    
+    <div id="splash-2" style="display:none;">
+        <form id="ageCheck">
+                <input type="checkbox" name="age" class="age" required>
+            <label for="age"> I am 21 years of age or older</label>
+        </form>
+    </div>
+    
+    <div id="splash-3" style="display:none;">
+        <form id="alienCheck">
+                <input type="checkbox" name="age" class="alien" required><label for="alien"> I am not an alien</label>
+        </form>
+    </div>
+    
+    
+    <div id="post-splash" style="display:none;">   
+        <video id="video-bg-elem" loop="loop">
+            <source src="alien.mp4" type="video/mp4">
+            Video not supported
+        </video>
+        
+</div>
+<script>
+       
+var video = document.getElementById("video-bg-elem"); 
+
+$( "#enter" ).click(function() {
+        $( "#splash" ).fadeOut( "fast" );
+        $( "#splash-2" ).fadeIn( "fast" );    
+});
+    
+$( "#ageCheck" ).click(function() {
+        $( "#splash-2" ).fadeOut( "fast" );
+        $( "#splash-3" ).fadeIn( "fast" );    
+});
+    
+$( "#alienCheck" ).click(function() {
+    var alienCheck = $('.alien').is(':checked');
+    if(alienCheck == true){
+        $( "#splash-3" ).fadeOut( "slow" );
+        $( "#space" ).fadeOut( "slow" );
+        $( "#post-splash" ).fadeIn( "slow" ); 
+        video.play();
+    }
+});
+</script>   
+</body>
+
+</html>
